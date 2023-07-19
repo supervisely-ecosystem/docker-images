@@ -47,6 +47,25 @@
 - [import-dicom-volumes](https://github.com/supervisely-ecosystem/import-dicom-volumes)
 - [import-volumes-with-anns](https://github.com/supervisely-ecosystem/import-volumes-with-anns)
 
+## Custom docker images:
+
+**supervisely/remote-import:1.1.0**
+
+- [remote-import](https://github.com/supervisely-ecosystem/remote-import)
+
+**supervisely/coco-dataset:1.0.0"**
+
+- [import-coco](https://github.com/supervisely-ecosystem/import-coco)
+- [import-coco-keypoints](https://github.com/supervisely-ecosystem/import-coco-keypoints)
+
+**supervisely/pointcloud:1.0.0**
+
+- [import-pointcloud-pcd](https://github.com/supervisely-ecosystem/import-pointcloud-pcd)
+- [import-pointcloud-ply](https://github.com/supervisely-ecosystem/import-pointcloud-ply)
+
+**supervisely/import-export-kitty:1.0.2**
+
+- [import-kitti-3d](https://github.com/supervisely-ecosystem/import-kitti-3d)
 
 ## Dependencies per application:
 
