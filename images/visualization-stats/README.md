@@ -1,4 +1,4 @@
-# List of export applications:
+# List of visualization and stats applications:
 
 ## Images
 

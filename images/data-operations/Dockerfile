@@ -1,1 +1,5 @@
 FROM supervisely/supervisely/base-py-sdk:6.72.70
+
+RUN pip install supervisely==6.72.70 supervisely[docs]==6.72.70 black isort
+RUN pip install imutils pyzbar==0.1.9
+RUN pip install moviepy==1.0.3 imageio-ffmpeg==0.4.7 ffmpeg_python==0.2.0

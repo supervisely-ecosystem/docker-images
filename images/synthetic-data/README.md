@@ -1,4 +1,4 @@
-# List of import applications:
+# List of synthetic data applications:
 
 - [flying-objects](https://github.com/supervisely-ecosystem/flying-objects)
 - [synthetic-retail-products](https://github.com/supervisely-ecosystem/synthetic-retail-products)
