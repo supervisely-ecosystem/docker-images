@@ -61,6 +61,19 @@ albumentations==1.1.0
 ```
 
 ### [**Data Operations**](./images/data-operations/Dockerfile) - data operations tools
+
+Unique deps:
+
+```text
+supervisely==6.72.70
+supervisely[docs]==6.72.70
+black
+isort
+imutils
+pyzbar==0.1.9
+moviepy==1.0.3
+imageio-ffmpeg==0.4.7
+``````
 ### [**Visualization & Stats**](./images/visualization-stats/Dockerfile) - visualization and statistics tools
 
 Unique deps:
