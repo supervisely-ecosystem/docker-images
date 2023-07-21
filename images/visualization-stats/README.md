@@ -34,9 +34,11 @@
 - [thumbnails-preview](https://github.com/supervisely-ecosystem/thumbnails-preview)
 - [objects-thumbnails-preview-by-class](https://github.com/supervisely-ecosystem/objects-thumbnails-preview-by-class)
 
+
 **supervisely/labels-spatial-distribution:1.0.0**
 
 - [labels-spatial-distribution](https://github.com/supervisely-ecosystem/labels-spatial-distribution)
+Fixed - base-py-sdk
 
 **instance-segmentation-metrics:1.0.0**
 
