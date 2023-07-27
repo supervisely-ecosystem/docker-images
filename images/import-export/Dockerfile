@@ -1,4 +1,4 @@
-FROM supervisely/supervisely/base-py-sdk:6.72.81
+FROM supervisely/base-py-sdk:6.72.81
 
 
 # Import
