@@ -37,11 +37,11 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-      - name: Increment Docker Tag
-        id: increment_tag
+      - name: Generate Docker Tag
+        id: generate_docker_tag
         run: |
-          ./increment_docker_tag.sh ${{ inputs.tag_version }}
-          echo "::set-output name=docker_tag::$(./increment_docker_tag.sh ${{ inputs.tag_version }})"
+          ./generate_docker_tag.sh ${{ inputs.tag_version }}
+          echo "::set-output name=docker_tag::$(./generate_docker_tag.sh ${{ inputs.tag_version }})"
 
       - name: Build and push
         uses: docker/build-push-action@v3
