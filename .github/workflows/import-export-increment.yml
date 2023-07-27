@@ -40,8 +40,8 @@ jobs:
       - name: Generate Docker Tag
         id: generate_docker_tag
         run: |
-          ./generate_docker_tag.sh ${{ inputs.tag_version }}
-          echo "::set-output name=docker_tag::$(./generate_docker_tag.sh ${{ inputs.tag_version }})"
+          sudo bash generate_docker_tag.sh ${{ inputs.tag_version }}
+          echo "::set-output name=docker_tag::$(sudo bash generate_docker_tag.sh ${{ inputs.tag_version }})"
 
       - name: Build and push
         uses: docker/build-push-action@v3
