@@ -39,17 +39,16 @@ open3d==0.15.2
 scikit-image==0.18.3
 ```
 
-### [**Neural Networks**](./images/neural-networks/Dockerfile) - neural networks for inference and training
-### [**Labeling**](./images/neural-networks/Dockerfile) - labeling tools
-### [**Collaboration**](./images/neural-networks/Dockerfile) - collaboration tools
-
+### [**Neural Networks**](./images/neural-networks/Dockerfile)
+### [**Labeling**](./images/neural-networks/Dockerfile)
+### [**Collaboration**](./images/neural-networks/Dockerfile)
 Unique deps:
 
 ```text
 supervisely==6.72.70
 ```
 
-### [**Synthetic Data**](./images/synthetic-data/Dockerfile) - synthetic data generation tools
+### [**Synthetic Data**](./images/synthetic-data/Dockerfile)
 
 Unique deps:
 
@@ -60,8 +59,7 @@ opencv-python==4.5.5.62
 albumentations==1.1.0
 ```
 
-### [**Data Operations**](./images/data-operations/Dockerfile) - data operations tools
-
+### [**Data Operations**](./images/data-operations/Dockerfile)
 Unique deps:
 
 ```text
@@ -73,8 +71,9 @@ imutils
 pyzbar==0.1.9
 moviepy==1.0.3
 imageio-ffmpeg==0.4.7
-``````
-### [**Visualization & Stats**](./images/visualization-stats/Dockerfile) - visualization and statistics tools
+```
+
+### [**Visualization & Stats**](./images/visualization-stats/Dockerfile)
 
 Unique deps:
 
@@ -88,28 +87,7 @@ timm
 torch
 scikit-learn
 umap-learn
-aniso8601==9.0.1
-certifi==2021.10.8
-charset-normalizer==2.0.10
-click==8.0.3
-cycler==0.11.0
-Flask==2.0.2
-fonttools==4.28.5
-idna==3.3
-imageio==2.13.5
-itsdangerous==2.0.1
-kiwisolver==1.3.2
-networkx==2.6.3
-packaging==21.3
-pyparsing==3.0.6
-python-dateutil==2.8.2
-pytz==2021.3
-PyWavelets==1.2.0
-six==1.16.0
-tenacity==8.0.1
-tifffile==2021.11.2
-websocket-client==1.2.3
-Cython
+Cython                      
 pycocotools
 open3d==0.15.2
 ```

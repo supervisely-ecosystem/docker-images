@@ -2,6 +2,8 @@ from globals import (
     REPOS,
     BRANCH_NAME,
     CONFIG_PATH,
+    REQUIREMENTS_PATH,
+    REQUIREMENTS_DEV_PATH,
     DOCKER_IMAGE,
     DOCKER_VERSION,
     PULL_REQUEST_TITLE,
@@ -10,11 +12,17 @@ from globals import (
     RELEASE_BODY,
 )
 
-from utils import update_config, merge, release
+from utils import update_config, merge, release, update_requirements
 
-todo_repos = ["import-images-in-sly-format"]
+# todo_repos = ["my-custom-nn-detection-model"]
+todo_repos = [
+    "convert-yolov5-to-supervisely-format",
+    "copy-project-between-instances",
+]
+
 completed_repos = []
-
+failed_config_repos = []
+failed_reqs_repos = []
 for repo in REPOS:
     if repo.name not in todo_repos:
         continue
@@ -38,24 +46,24 @@ for repo in REPOS:
 
     try:
         # find and read config.json
-        contents = repo.get_contents(CONFIG_PATH, ref=branch.name)
-        data, sha = update_config(contents, DOCKER_IMAGE, DOCKER_VERSION)
+        update_config(
+            repo, branch.name, CONFIG_PATH, PULL_REQUEST_TITLE, DOCKER_IMAGE, DOCKER_VERSION
+        )
     except Exception as e:
         print(f"Couldn't update '{CONFIG_PATH}' in {repo.name}. Repo is skipped. Reason: {e}")
-        completed_repos.append(repo)
+        failed_config_repos.append(repo)
         continue
 
-    repo.update_file(
-        path=CONFIG_PATH,
-        message=PULL_REQUEST_TITLE,
-        content=data,
-        sha=sha,
-        branch=branch.name,
-    )
-    print(f"Docker image for {repo.name} has been updated")
+    try:
+        # find and read requirements.txt
+        update_requirements(
+            repo, branch.name, REQUIREMENTS_PATH, REQUIREMENTS_DEV_PATH, DOCKER_VERSION
+        )
+    except Exception as e:
+        print(f"Couldn't update '{REQUIREMENTS_PATH}' in {repo.name}. Reason: {e}")
+        failed_reqs_repos.append(repo)
+
     completed_repos.append(repo)
-    if len(completed_repos) == len(todo_repos):
-        break
 
 
 for repo in completed_repos:

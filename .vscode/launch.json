@@ -2,10 +2,21 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Python: Current File",
+            "name": "Push",
             "type": "python",
             "request": "launch",
             "program": "src/main.py",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}:${PYTHONPATH}"
+            }
+        },
+        {
+            "name": "Map builder",
+            "type": "python",
+            "request": "launch",
+            "program": "src/app_map_builder.py",
             "console": "integratedTerminal",
             "justMyCode": false,
             "env": {
