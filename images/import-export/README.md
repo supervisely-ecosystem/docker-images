@@ -1,5 +1,6 @@
 # List of import applications:
 
+kitti360 - failed
 ## Images
 - [import-images](https://github.com/supervisely-ecosystem/import-images)
 - [import-images-in-sly-format](https://github.com/supervisely-ecosystem/import-images-in-sly-format)
@@ -161,7 +162,8 @@ lazrs==0.3.0
 
 # import kitti 360
 supervisely==6.72.70
-git+https://github.com/autonomousvision/kitti360Scripts.git transforms3d==0.3.1
+git+https://github.com/autonomousvision/kitti360Scripts.git
+transforms3d==0.3.1
 open3d==0.14.1
 
 
@@ -225,11 +227,6 @@ pylibjpeg-libjpeg==1.3.1
 ## Dependencies per application:
 
 ```text
-#base
-supervisely==6.72.70
-black
-isort
-
 #export-as-masks
 #export-to-supervisely-format
 #convert-supervisely-to-yolov5-format
@@ -255,6 +252,7 @@ supervisely==6.68.109
 lxml==4.6.3
 
 # Videos
+
 #export-videos-project-in-supervisely-format
 #export-only-labeled-items
 #render-video-labels-to-mp4
