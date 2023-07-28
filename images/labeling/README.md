@@ -20,6 +20,7 @@
 ## Custom docker images:
 
 - [apply-nn-to-videos-project](https://github.com/supervisely-ecosystem/apply-nn-to-videos-project)
+- [gl-metric-learning](https://github.com/supervisely-ecosystem/gl-metric-learning)
 
 ## Dependencies per application:
 
