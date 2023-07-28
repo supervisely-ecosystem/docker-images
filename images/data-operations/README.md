@@ -39,7 +39,6 @@
 - [slice-volumes](https://github.com/supervisely-ecosystem/slice-volumes)
 - [object-class-to-tag](https://github.com/supervisely-ecosystem/object-class-to-tag)
 - [merge-tags](https://github.com/supervisely-ecosystem/merge-tags)
-- [compare-models-predictions-on-demo-video](https://github.com/supervisely-ecosystem/compare-models-predictions-on-demo-video)
 - [take-fragment-from-video](https://github.com/supervisely-ecosystem/take-fragment-from-video)
 - [interpolation-tracker-v1](https://github.com/supervisely-ecosystem/interpolation-tracker-v1)
 - [change-video-framerate](https://github.com/supervisely-ecosystem/change-video-framerate)
@@ -82,7 +81,6 @@
 # rasterize-objects-on-images
 # object-tags-redactor
 # split-dataset
-# compare-models-predictions-on-demo-vi
 # convert-to-semantic-segmentation
 # render-video-from-images
 # unpack-key-value-tags
