@@ -1,4 +1,4 @@
-# List of synthetic data applications:
+# List of synthetic applications:
 
 - [flying-objects](https://github.com/supervisely-ecosystem/flying-objects)
 - [synthetic-retail-products](https://github.com/supervisely-ecosystem/synthetic-retail-products)
@@ -14,11 +14,6 @@
 ## Dependencies per application:
 
 ```text
-# base
-supervisely==6.72.70
-black
-isort
-
 # flying-objects
 supervisely==6.72.70
 albumentations==1.1.0

@@ -14,9 +14,7 @@ RUN pip install gdcm==1.1 pylibjpeg==1.4.0 pylibjpeg-libjpeg==1.3.1
 # Export
 
 RUN pip install lxml==4.6.3
-# RUN pip install open3d==0.15.2 
 RUN pip install scikit-image==0.18.3
 
 # Supervisely
-
 RUN pip install supervisely==6.72.82
