@@ -99,6 +99,14 @@
 # slice-volumes
 # object-class-to-tag
 # merge-tags
+# compare-models-predictions-on-demo-video
+# interpolation-tracker-v1
+# convert-video-class-shape
+# convert-video-class-shape
+# youtube-downloader
+# synthetic-videos-for-tracking
+# convert_ptc_to_ptc_episodes
+# slice-volumes
 supervisely==6.72.70
 
 
@@ -116,15 +124,7 @@ imutils
 pyzbar==0.1.9
 
 
-# compare-models-predictions-on-demo-video
-# interpolation-tracker-v1
-# convert-video-class-shape
-# convert-video-class-shape
-# youtube-downloader
-# synthetic-videos-for-tracking
-# convert_ptc_to_ptc_episodes
-# slice-volumes
-supervisely==6.72.70
+
 
 # take-fragment-from-video
 supervisely==6.72.70

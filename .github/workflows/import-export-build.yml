@@ -1,0 +1,59 @@
+name: Combined Import - Export Build
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag_version:
+        description: "Docker Image Tag"
+        required: true
+        default: ""
+      increment_type:
+        type: choice
+        description: "Update Tag version"
+        required: true
+        options:
+          - Manual
+          - Major
+          - Minor
+          - Patch
+
+env:
+  DOCKER_REGISTRY: docker.io
+  DOCKER_REPO: your-docker-repo
+  DOCKER_IMAGE_NAME: your-docker-image
+
+jobs:
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v2
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+      - name: Login to DockerHub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+      - name: Generate Docker Tag
+        id: generate_docker_tag
+        if: ${{ github.event.inputs.increment_type != 'Manual' }}
+        run: |
+          sudo bash generate_docker_tag.sh ${{ github.event.inputs.increment_type }}
+          echo "::set-output name=docker_tag::$(sudo bash generate_docker_tag.sh ${{ github.event.inputs.increment_type }})"
+      - name: Build and push
+        uses: docker/build-push-action@v3
+        with:
+          push: true
+          file: images/import-export/Dockerfile
+          tags: supervisely/import-export:${{ github.event.inputs.tag_version }}
+          if: ${{ github.event.inputs.increment_type == 'Manual' }}
+      - name: Build and push (with increment)
+        uses: docker/build-push-action@v3
+        with:
+          push: true
+          file: images/import-export/Dockerfile
+          tags: supervisely/import-export:${{ steps.generate_docker_tag.outputs.docker_tag }}
+          if: ${{ github.event.inputs.increment_type != 'Manual' }}
