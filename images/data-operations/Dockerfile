@@ -1,4 +1,4 @@
-FROM supervisely/supervisely/base-py-sdk:6.72.82
+FROM supervisely/base-py-sdk:6.72.82
 
 RUN pip install imutils pyzbar==0.1.9
 RUN pip install moviepy==1.0.3 imageio-ffmpeg==0.4.7

@@ -1,4 +1,4 @@
-name: Visualization Build manual
+name: Visualization - Stats Build manual
 
 on:
   workflow_dispatch:
@@ -25,5 +25,5 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          file: images/visualization/Dockerfile
-          tags: supervisely/visualization:${{ github.event.inputs.tag_version }}
+          file: images/visualization-stats/Dockerfile
+          tags: supervisely/visualization-stats:${{ github.event.inputs.tag_version }}

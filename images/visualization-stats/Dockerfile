@@ -1,4 +1,4 @@
-FROM supervisely/supervisely/base-py-sdk:6.72.82
+FROM supervisely/base-py-sdk:6.72.82
 
 RUN pip install diskcache==5.2.1, seaborn==0.11.0
 RUN pip install pycocotools==2.0.6
