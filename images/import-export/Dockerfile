@@ -1,4 +1,4 @@
-FROM supervisely/base-py-sdk:6.72.82
+FROM supervisely/base-py-sdk:6.72.85
 
 
 # Import
@@ -17,4 +17,4 @@ RUN pip install lxml==4.6.3
 RUN pip install scikit-image==0.18.3
 
 # Supervisely
-RUN pip install supervisely==6.72.82
+RUN pip install supervisely==6.72.85
